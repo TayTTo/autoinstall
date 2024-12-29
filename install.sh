@@ -32,5 +32,9 @@ if [ ! -d "$HOME/Downloads/nvimDownload" ]; then
     sudo mv nvim.appimage /opt/nvim/nvim
 fi
 
+if [ ! -d "$HOME/.zplug" ]; then
+	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+fi
+
 	
 

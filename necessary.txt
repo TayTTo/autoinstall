@@ -10,7 +10,6 @@ fzf
 fd-find
 ripgrep
 zsh
-zplug
 picom
 stow
 i3
