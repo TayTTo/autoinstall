@@ -28,3 +28,9 @@ qemu-utils
 qemu-system-x86 
 qemu-system-gui
 virt-manager
+vagrant
+ibus
+ibus-unikey
+blueman
+thefuck
+ansible

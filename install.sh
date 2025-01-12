@@ -17,7 +17,7 @@ if [ ! -d "$HOME/Downloads/kali-themes" ]; then
     cd ~/Downloads/
     git clone https://gitlab.com/kalilinux/packages/kali-themes/
     cd kali-themes/share/
-    sudo mv icons/Flat-Remix-Blue-Light/ /usr/share/icons/
+    sudo mv icons/Flat-Remix-Blue-Light /usr/share/icons/
     sudo mv qt5ct/colors/Kali-Light.conf /usr/share/qt5ct/colors/
     sudo mv themes/Kali-Light /usr/share/themes
 fi
