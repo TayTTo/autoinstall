@@ -36,5 +36,9 @@ if [ ! -d "$HOME/.zplug" ]; then
 	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
 
+if [  ! -d "$HOME/.tmux/plugins/tpm" ]; then
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
 	
 
