@@ -40,4 +40,5 @@ blueman
 ansible
 obsidian
 samba
+samba-client
 rofi
