@@ -44,3 +44,7 @@ if [ ! -d "$HOME/.tmuxifier" ]; then
 	git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 fi
 
+if [ ! -d "$HOME/.local/bin/fd" ]; then
+	mkdir -p "$HOME/.local/bin/fd"
+	ln -s $(which fdfind) ~/.local/bin/fd
+fi
