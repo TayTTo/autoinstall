@@ -39,3 +39,4 @@ ibus
 ibus-unikey
 blueman
 ansible
+obsidian
