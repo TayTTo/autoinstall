@@ -42,3 +42,6 @@ obsidian
 samba
 samba-client
 rofi
+gvfs
+gvfs-backends 
+gvfs-fuse
