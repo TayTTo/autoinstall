@@ -26,7 +26,6 @@ gh
 qemu-utils 
 qemu-system-x86 
 qemu-system-gui
-qemu-kvm
 qemu-system
 libvirt-clients
 libvirt-daemon-system 
@@ -40,3 +39,5 @@ ibus-unikey
 blueman
 ansible
 obsidian
+samba
+
