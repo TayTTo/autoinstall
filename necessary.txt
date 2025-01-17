@@ -40,4 +40,4 @@ blueman
 ansible
 obsidian
 samba
-
+rofi
