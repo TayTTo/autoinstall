@@ -13,7 +13,6 @@ zsh
 picom
 stow
 i3
-konsole
 zoxide
 snap
 snapd
@@ -27,10 +26,16 @@ gh
 qemu-utils 
 qemu-system-x86 
 qemu-system-gui
+qemu-kvm
+qemu-system
+libvirt-clients
+libvirt-daemon-system 
+bridge-utils
+virtinst
+libvirt-daemon
 virt-manager
 vagrant
 ibus
 ibus-unikey
 blueman
-thefuck
 ansible
