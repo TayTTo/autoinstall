@@ -12,7 +12,6 @@ ripgrep
 zsh
 picom
 stow
-i3
 zoxide
 snap
 snapd
@@ -40,6 +39,7 @@ obsidian
 samba
 samba-client
 rofi
+wl-clipboard
 brightnessctl
 sway
 swayidle
