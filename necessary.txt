@@ -40,6 +40,7 @@ obsidian
 samba
 samba-client
 rofi
+<<<<<<< HEAD
 brightnessctl
 sway
 swayidle
@@ -47,3 +48,8 @@ swaylock
 swaybg
 fcitx5
 fcitx5-unikey
+=======
+gvfs
+gvfs-backends 
+gvfs-fuse
+>>>>>>> a725dbe5e2fd79d8996298bcb5df9cdeb4994dd6
