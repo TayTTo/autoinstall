@@ -47,3 +47,4 @@ swaylock
 swaybg
 fcitx5
 fcitx5-unikey
+grimshot
