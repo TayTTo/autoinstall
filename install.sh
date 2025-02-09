@@ -26,10 +26,10 @@ if [ ! -d "$HOME/Downloads/nvimDownload" ]; then
     cd ~/Downloads
     mkdir nvimDownload
     cd nvimDownload
-    curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage 
-    chmod u+x nvim.appimage
+    curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage  
+    chmod u+x nvim-linux-x86_64.appimage
     sudo mkdir -p /opt/nvim
-    sudo mv nvim.appimage /opt/nvim/nvim
+    sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 fi
 
 if [ ! -d "$HOME/.zplug" ]; then

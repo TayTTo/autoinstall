@@ -48,3 +48,6 @@ swaybg
 fcitx5
 fcitx5-unikey
 grimshot
+pipewire
+xdg-desktop-portal-wlr 
+xdg-desktop-portal-gtk
