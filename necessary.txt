@@ -31,8 +31,11 @@ libvirt-daemon-system
 bridge-utils
 virtinst
 libvirt-daemon
+libvirt-dev
 virt-manager
 vagrant
+vagrant-libvirt
+libvirt-daemon-system
 blueman
 ansible
 obsidian
@@ -51,3 +54,4 @@ grimshot
 pipewire
 xdg-desktop-portal-wlr 
 xdg-desktop-portal-gtk
+python3-pip
