@@ -58,3 +58,6 @@ if [ ! -d "$HOME/Downloads/lazygitDown" ]; then
 	tar xf lazygit.tar.gz lazygit
 	sudo install lazygit -D -t /usr/local/bin/
 fi
+
+sudo ln -s /usr/bin/convert /usr/bin/magick
+
