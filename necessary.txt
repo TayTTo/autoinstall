@@ -12,7 +12,6 @@ ripgrep
 zsh
 picom
 stow
-zoxide
 snap
 snapd
 zsh-syntax-highlighting
@@ -55,4 +54,3 @@ pipewire
 xdg-desktop-portal-wlr 
 xdg-desktop-portal-gtk
 python3-pip
-imagemagick

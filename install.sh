@@ -13,15 +13,6 @@ if ! ls "$FONT_DIR" | grep -qi "JetBrain"; then
     fc-cache -fv
 fi
 
-if [ ! -d "$HOME/Downloads/kali-themes" ]; then
-    cd ~/Downloads/
-    git clone https://gitlab.com/kalilinux/packages/kali-themes/
-    cd kali-themes/share/
-    sudo mv icons/Flat-Remix-Blue-Light /usr/share/icons/
-    sudo mv qt5ct/colors/Kali-Light.conf /usr/share/qt5ct/colors/
-    sudo mv themes/Kali-Light /usr/share/themes
-fi
-
 if [ ! -d "$HOME/Downloads/nvimDownload" ]; then
     cd ~/Downloads
     mkdir nvimDownload
@@ -34,11 +25,6 @@ fi
 
 if [ ! -d "$HOME/.zplug" ]; then
 	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-fi
-
-if [  ! -d "$HOME/.tmux/plugins/tpm" ]; then
-	mkdir -p "$HOME/.tmux/plugins/tpm"
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
 if [ ! -d "$HOME/.tmuxifier" ]; then
@@ -60,4 +46,7 @@ if [ ! -d "$HOME/Downloads/lazygitDown" ]; then
 fi
 
 sudo ln -s /usr/bin/convert /usr/bin/magick
-
+sudo ln -s /var/run/docker.sock ~/.docker/desktop/docker.sock
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
