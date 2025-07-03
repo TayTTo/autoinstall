@@ -1,7 +1,14 @@
 #!/bin/bash
 
+if [ -z "$1" ] || [ ! -f "$1" ]; then
+    echo "Usage: $0 <package-list-file>"
+    exit 1
+fi
+
+PACKAGE_LIST="$1"
+
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y $(cat necessary.txt)
+sudo apt install -y $(cat "$PACKAGE_LIST")
 
 FONT_DIR="$HOME/.local/share/fonts"
 if [ ! -d "$FONT_DIR" ]; then
@@ -20,7 +27,12 @@ if [ ! -d "$HOME/Downloads/nvimDownload" ]; then
     curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage  
     chmod u+x nvim-linux-x86_64.appimage
     sudo mkdir -p /opt/nvim
+ else
+    cd ~/Downloads/nvimDownload
+    curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage  
+    chmod u+x nvim-linux-x86_64.appimage
     sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
+	sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 fi
 
 if [ ! -d "$HOME/.zplug" ]; then
@@ -45,8 +57,32 @@ if [ ! -d "$HOME/Downloads/lazygitDown" ]; then
 	sudo install lazygit -D -t /usr/local/bin/
 fi
 
-sudo ln -s /usr/bin/convert /usr/bin/magick
-sudo ln -s /var/run/docker.sock ~/.docker/desktop/docker.sock
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+#!/bin/bash
+
+# Check if /usr/bin/magick symlink exists
+if [ ! -L /usr/bin/magick ]; then
+    echo "Creating symlink for magick..."
+    sudo ln -s /usr/bin/convert /usr/bin/magick
+else
+    echo "Symlink /usr/bin/magick already exists, skipping."
+fi
+
+# Check if ~/.docker/desktop/docker.sock symlink exists
+if [ ! -L "$HOME/.docker/desktop/docker.sock" ]; then
+    echo "Creating symlink for Docker socket..."
+    mkdir -p "$HOME/.docker/desktop"
+    sudo ln -s /var/run/docker.sock "$HOME/.docker/desktop/docker.sock"
+fi
+
+# Install zoxide if not already installed
+if ! command -v zoxide >/dev/null 2>&1; then
+    echo "Installing zoxide..."
+    curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+fi
+
+# Clone fzf repo if ~/.fzf doesn't exist
+if [ ! -d "$HOME/.fzf" ]; then
+    echo "Cloning fzf..."
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install --all
+fi

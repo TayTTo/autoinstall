@@ -6,11 +6,9 @@ cmake
 make
 mingw-w64-x86-64-dev
 tmux
-fzf
 fd-find
 ripgrep
 zsh
-picom
 stow
 snap
 snapd
@@ -19,7 +17,6 @@ curl
 git
 qt5ct
 lxappearance
-telegram-desktop
 gh
 qemu-utils 
 qemu-system-x86 
@@ -32,12 +29,8 @@ virtinst
 libvirt-daemon
 libvirt-dev
 virt-manager
-vagrant
-vagrant-libvirt
 libvirt-daemon-system
 blueman
-ansible
-obsidian
 samba
 samba-client
 rofi
