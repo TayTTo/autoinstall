@@ -47,3 +47,5 @@ pipewire
 xdg-desktop-portal-wlr 
 xdg-desktop-portal-gtk
 python3-pip
+network-manager-applet
+waybar
